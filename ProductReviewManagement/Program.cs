@@ -34,6 +34,7 @@ namespace ProductReviewManagement
             //        + " " + "Rating:-" + list.Rating + " " + "Review:-" + list.Review + " " + "isLike:-" + list.isLike);
             //}
             management.ProductReviewsDataTable(productReviewList);
+            management.RetriveRecordsFromDataTable();
         }
     }
 }
