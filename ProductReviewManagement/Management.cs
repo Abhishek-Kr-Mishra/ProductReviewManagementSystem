@@ -89,5 +89,13 @@ namespace ProductReviewManagement
                     + product.Field<double>("Rating") + " " + product.Field<string>("Review") + " " + product.Field<bool>("isLike"));
             }
         }
+        public void AveragePerProductId(List<ProductReview> review)
+        {
+            var recordedData = review.GroupBy(x => x.ProductID).Select(x => new { ProductID = x.Key, AverageRating = x.Average(x => x.Rating) });
+            foreach (var list in recordedData)
+            {
+                Console.WriteLine(list.ProductID + "-----" + list.AverageRating);
+            }
+        }
     }
 }

@@ -33,8 +33,8 @@ namespace ProductReviewManagement
             //    Console.WriteLine("ProductID:-" + list.ProductID + " " + "UserID:-" + list.UserID
             //        + " " + "Rating:-" + list.Rating + " " + "Review:-" + list.Review + " " + "isLike:-" + list.isLike);
             //}
-            management.ProductReviewsDataTable(productReviewList);
-            management.RetriveRecordsFromDataTable();
+            management.AveragePerProductId(productReviewList);
+
         }
     }
 }
